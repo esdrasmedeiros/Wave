@@ -1,6 +1,12 @@
 #ifndef DDG_APPLICATION_H
 #define DDG_APPLICATION_H
 
+#include "Mesh.h"
+#include "Real.h"
+#include "DenseMatrix.h"
+#include "SparseMatrix.h"
+#include "DiscreteExteriorCalculus.h"
+
 namespace DDG
 {
    class Application
@@ -13,7 +19,7 @@ namespace DDG
                HodgeStar0Form<Real>::build(mesh, star0);
 
                SparseMatrix<Real> star1;
-               HodgeStar1Form<Real>::build(mesh, d0);
+               HodgeStar1Form<Real>::build(mesh, star1);
 
                SparseMatrix<Real> d0;
                ExteriorDerivative0Form<Real>::build(mesh, d0);

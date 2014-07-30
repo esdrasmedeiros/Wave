@@ -88,7 +88,7 @@ namespace DDG
       return rval;
    }
    
-   int Mesh::write( const string& filename ) const
+   int Mesh::write( const string& filename ) const 
    // reads a mesh from a Wavefront OBJ file; return value is nonzero
    // only if there was an error
    {
@@ -188,14 +188,18 @@ namespace DDG
       return sum / edges.size();
    }
 
-   int Mesh::readPressure()
+   int Mesh::readPressure(const std::string& filename)
    {
+       inputPressure = filename;
+
+       return 0;
 
    }
 
-   int Mesh::readVelocity()
+   int Mesh::readVelocity(const std::string& filename)
    {
-
+       inputPressure= filename;
+      return 0;
    }
 
 

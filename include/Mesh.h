@@ -85,11 +85,11 @@ namespace DDG
       double meanEdgeLength( void  ) const;
       // returns mean edge lenght
 
-      int readPressure(void);
+      int readPressure(const std::string& filename);
       //  reads first initial condition (pressure) from a txt file; 
       //  return value is nonzero only if there was an error
 
-      int readVelocity(void)
+      int readVelocity(const std::string& filename);
       //  reads second initial condition (velocity) from a txt file; 
       //  return value is
       //  nonzero only if there was an error
